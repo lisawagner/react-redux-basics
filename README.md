@@ -1,2 +1,2 @@
 # react-redux-basics
-Boiler plate for reac app.
+Boiler plate for react app.
