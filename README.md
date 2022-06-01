@@ -14,7 +14,7 @@ A React study project. Created so far:
       - Utilized *Axios*, an HTTP promise-based request library for sending and retrieving responses.
       - Refactored React v16.4 `<HOME>` functional component to a class based component in order to utilize the lifecycle method `<componentDidMount()>`
       - Added additional class based components where `<componentDidMount()>` is needed.
-      - Using react-router-dom v6 with React v16.4 became counter productive. Upgrading everyting would work with significant refactoring. Downgrading created a stable development environment more readily.
+      - Mixing recent(2022) packages with React v16.4 became counter productive. Upgrading everything would work with significant refactoring. Downgrading created a stable development environment more readily.
       - Added an image for testing purposes.
       
   4.  State management with Redux

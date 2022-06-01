@@ -6,15 +6,22 @@ body {
 }
 
 .home .post img {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  opacity: 0.6;
-  width: 16%;
-  height: auto;
+  display: none;
 }
 
-.home .post {
-  overflow: hidden;
-  padding-left: 130px;
+@media (min-width: 768px) {
+  .home .post img {
+    display: block;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    opacity: 0.25;
+    width: 125px;
+    height: 125px;
+  }
+  
+  .home .post {
+    overflow: hidden;
+    padding-left: 130px;
+  }
 }
