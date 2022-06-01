@@ -17,7 +17,7 @@ A React study project. Created so far:
       - Mixing recent(2022) packages with React v16.4 became counter productive. Upgrading everything would work with significant refactoring. Downgrading created a stable development environment more readily.
       - Added an image for testing purposes.
 
-      *IMPORTANT NOTE:*
+      *NOTE:*
 
       While using materialize-css (not MUI, nor the React specific materialize), this error comes up:
 
