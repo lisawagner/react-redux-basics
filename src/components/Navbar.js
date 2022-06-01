@@ -10,9 +10,11 @@ const Navbar = (props) => {
   // }, 3000)
 
   return (
+    <React.Fragment>
     <nav className="nav-wrapper blue darken-3">
       <div className="container">
         <Link to="/" className="brand-logo">Bloggles</Link>
+        <Link to='/' data-target="slide-out" className="sidenav-trigger"><i className="material-icons">menu</i></Link>
         <ul className='right hide-on-med-and-down'>
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/about">About</NavLink></li>
@@ -21,6 +23,14 @@ const Navbar = (props) => {
         </ul>
       </div>
     </nav>
+
+    <ul className="sidenav" id="slide-out">
+      <li><NavLink to="/">Home</NavLink></li>
+      <li><NavLink to="/about">About</NavLink></li>
+      <li><NavLink to="/todos">Todos</NavLink></li>
+      <li><NavLink to="/contact">Contact</NavLink></li>
+    </ul>
+    </React.Fragment>
   )
 }
 

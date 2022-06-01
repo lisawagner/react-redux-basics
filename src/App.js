@@ -8,8 +8,15 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import TodoApp from './pages/TodoApp'
 import Post from './pages/Post';
+import 'materialize-css/dist/css/materialize.min.css';
+import M from  'materialize-css/dist/js/materialize.min.js';
 
 class App extends Component {
+  componentDidMount() {
+    let sidenav = document.querySelector('#slide-out');
+    M.Sidenav.init(sidenav, {});
+  }
+
   render() {
     return (
       <BrowserRouter>
