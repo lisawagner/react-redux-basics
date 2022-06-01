@@ -1,12 +1,52 @@
-import React from 'react'
+import React, { Component } from 'react'
+import axios from 'axios'
+import { Link } from 'react-router-dom'
+import Blogicon from '../img/blogging.png'
 
-const Home = () => {
-  return (
-    <div className="container">
-      <h4 className="center">Home</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati illum iste eum voluptatibus, numquam et quidem labore eveniet culpa recusandae sit quae quam quas neque accusantium repellendus omnis fugiat at doloribus? Molestias alias, quod eos minus velit blanditiis harum delectus, in facilis, iusto libero nihil.</p>
-    </div>
-  )
+// Blog icon from "https://www.flaticon.com/free-icons/blog" created by Freepik
+
+class Home extends Component {
+  state = {
+    posts: []
+  }
+  componentDidMount(){
+    axios.get('https://jsonplaceholder.typicode.com/posts/')
+      .then(res => {
+        console.log(res);
+        this.setState({
+          posts: res.data.slice(0,10)
+        });
+      })
+  }
+  render(){
+    const { posts } = this.state
+    const postList = posts.length ? (
+      posts.map(post => {
+        return (
+          <div className="post card" key={post.id}>
+            <img src={Blogicon} alt="A blog icon" />
+            <div className="card-content">
+              <Link to={'/' + post.id}>
+                <span className="card-title cyan-text">{post.title}</span>
+              </Link>
+              <p>{post.body}</p>
+            </div>
+          </div>
+        )
+      })
+    ) : (
+      <div className="center">No posts to show</div>
+    );
+
+    return (
+      <div>
+        <div className="container home">
+          <h4 className="center">Bloggles Reading List</h4>
+          {postList}
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Home

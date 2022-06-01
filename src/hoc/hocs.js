@@ -8,7 +8,6 @@ export function withNavigation(Component) {
 export function withParams(Component) {
   return props => <Component {...props} params={useParams()} />;
 }
-
 export function withLocation(Component) {
   return props => <Component {...props} location={useLocation()} />;
 }

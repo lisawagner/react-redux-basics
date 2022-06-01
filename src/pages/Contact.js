@@ -1,7 +1,7 @@
 import React from 'react'
 
 // props object has the router info in it?
-const Contact = () => {
+const Contact = (props) => {
 
   return (
     <div className="container">

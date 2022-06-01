@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Route, BrowserRouter, Switch } from 'react-router-dom'
 
 // components
 import Navbar from './components/Navbar';
@@ -7,25 +7,26 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import TodoApp from './pages/TodoApp'
+import Post from './pages/Post';
 
 class App extends Component {
-  
-
   render() {
     return (
       <BrowserRouter>
-        <div className="app">
+        <div className="App">
           <Navbar />
-          <Routes>
-            <Route path="/about" element={<About />} />
-            <Route path="/todos" element={<TodoApp />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<Home />} />
-          </Routes>
+          <Switch>
+            <Route exact path='/' component={Home}/>
+            <Route path='/about' component={About} />
+            <Route path='/todos' component={TodoApp} />
+            <Route path='/contact' component={Contact} />
+            <Route path='/:post_id' component={Post} />
+          </Switch>
         </div>
       </BrowserRouter>
     );
   }
 }
+
 
 export default App;

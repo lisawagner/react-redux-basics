@@ -4,3 +4,17 @@ body {
   font-family: sans-serif;
   background: lightgrey;
 }
+
+.home .post img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  opacity: 0.6;
+  width: 16%;
+  height: auto;
+}
+
+.home .post {
+  overflow: hidden;
+  padding-left: 130px;
+}
