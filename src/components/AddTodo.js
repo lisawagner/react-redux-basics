@@ -22,10 +22,16 @@ export default class AddTodo extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>Add new todo:</label>
-          <input type="text" onChange={this.handleChange} value={this.state.content} />
+      <div className="add-todo" >
+        <form className="col s12" onSubmit={this.handleSubmit}>
+          <div className="row">
+            <div className="col s12">
+              <div className="input-field inline col s12">
+                <label>Add new todo:</label>
+                <input type="text" onChange={this.handleChange} value={this.state.content} />
+              </div>
+            </div>
+          </div>
         </form>
       </div>
     )

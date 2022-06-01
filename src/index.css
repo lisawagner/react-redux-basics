@@ -2,9 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: lightgrey;
+  background: ghostwhite;
 }
 
+/* HOME Styles */
 .home .post img {
   display: none;
 }
@@ -24,4 +25,20 @@ body {
     overflow: hidden;
     padding-left: 130px;
   }
+}
+
+/* TODOS Styles */
+.todo-app .collection {
+  margin-bottom: 2rem;
+}
+.todos .collection-item {
+  text-transform: capitalize;
+}
+.todos .todo-item {
+  margin-left: 10px;
+}
+
+.add-todo .input-field.inline input[type=text]:focus {
+  /* background: pink; */
+  border-bottom: 2px solid #2196F3;
 }
