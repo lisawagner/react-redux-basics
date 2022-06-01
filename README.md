@@ -8,7 +8,7 @@ A React study project. Created so far:
       - [Does v6 drop support for class components?](https://github.com/remix-run/react-router/issues/8146)
       - [Request: withRouter for v6](https://github.com/remix-run/react-router/issues/7256)
   
-  3.  Refactored the `<Home>` component for displaying **Dynamic Data**:
+  3.  Created Blog demo by refactoring `<Home>` component to display **Dynamic Data**:
 
       - Included a third party *RestAPI*, [JSONPlaceholder](https://jsonplaceholder.typicode.com/guide/) (a free online REST service) to load demo data.
       - Utilized *Axios*, an HTTP promise-based request library for sending and retrieving responses.
