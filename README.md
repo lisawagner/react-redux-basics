@@ -18,11 +18,12 @@ A React study project. Created so far:
       - Added an image for testing purposes.
 
       *IMPORTANT NOTE*
-      While using materialize-css(not MUI, nor the React specific materialize), this error comes up:
+
+      While using materialize-css (not MUI, nor the React specific materialize), this error comes up:
 
       >materialize.min.js:7 [Violation] Added non-passive event listener to a scroll-blocking 'touchmove' event. Consider marking event handler as 'passive' to make the page more responsive.
 
-      This is due to the *Passive Event Listeners* feature added to modern browsers in the summer of 2016. Use of a more current css framework that uses a .js library implementing this 'bleeding edge' feature would solve the issue. View details in this [article](https://stackoverflow.com/questions/39152877/consider-marking-event-handler-as-passive-to-make-the-page-more-responsive)
+      This is due to the *Passive Event Listeners* feature added to modern browsers in the summer of 2016. Use of a more current css framework that uses a .js library implementing this 'bleeding edge' feature would solve the issue. View details in this [article](https://stackoverflow.com/questions/39152877/consider-marking-event-handler-as-passive-to-make-the-page-more-responsive).
       
   4.  State management with Redux
       - Added state management with Redux
